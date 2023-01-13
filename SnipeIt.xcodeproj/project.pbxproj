@@ -14,6 +14,11 @@
 		4B23379329721D89002CB991 /* SnipeItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23379229721D89002CB991 /* SnipeItTests.swift */; };
 		4B23379D29721D89002CB991 /* SnipeItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23379C29721D89002CB991 /* SnipeItUITests.swift */; };
 		4B23379F29721D89002CB991 /* SnipeItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23379E29721D89002CB991 /* SnipeItUITestsLaunchTests.swift */; };
+		4B2337AF29721DF7002CB991 /* ServerConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337AE29721DF7002CB991 /* ServerConfigView.swift */; };
+		4B2337B129722328002CB991 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337B029722328002CB991 /* MainView.swift */; };
+		4B2337B52972235B002CB991 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337B42972235B002CB991 /* MainViewModel.swift */; };
+		4B2337B9297223AB002CB991 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337B8297223AB002CB991 /* MainState.swift */; };
+		4B2337BD2972250B002CB991 /* SnipeItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337BC2972250B002CB991 /* SnipeItView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		4B23379829721D89002CB991 /* SnipeItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipeItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B23379C29721D89002CB991 /* SnipeItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItUITests.swift; sourceTree = "<group>"; };
 		4B23379E29721D89002CB991 /* SnipeItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4B2337AE29721DF7002CB991 /* ServerConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfigView.swift; sourceTree = "<group>"; };
+		4B2337B029722328002CB991 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4B2337B42972235B002CB991 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		4B2337B8297223AB002CB991 /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		4B2337BC2972250B002CB991 /* SnipeItView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,7 @@
 		4B23377F29721D86002CB991 /* SnipeIt */ = {
 			isa = PBXGroup;
 			children = (
+				4B2337AB29721DA6002CB991 /* Features */,
 				4B23378029721D86002CB991 /* SnipeItApp.swift */,
 				4B23378229721D86002CB991 /* ContentView.swift */,
 				4B23378429721D88002CB991 /* Assets.xcassets */,
@@ -127,6 +138,82 @@
 				4B23379E29721D89002CB991 /* SnipeItUITestsLaunchTests.swift */,
 			);
 			path = SnipeItUITests;
+			sourceTree = "<group>";
+		};
+		4B2337AB29721DA6002CB991 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337BA297224EA002CB991 /* SnipeIt */,
+				4B2337B229722345002CB991 /* Main */,
+				4B2337AC29721DB2002CB991 /* ServerConfig */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4B2337AC29721DB2002CB991 /* ServerConfig */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337AD29721DE7002CB991 /* Views */,
+			);
+			path = ServerConfig;
+			sourceTree = "<group>";
+		};
+		4B2337AD29721DE7002CB991 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337AE29721DF7002CB991 /* ServerConfigView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B2337B229722345002CB991 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337B729722394002CB991 /* Model */,
+				4B2337B62972235E002CB991 /* ViewModel */,
+				4B2337B32972234B002CB991 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4B2337B32972234B002CB991 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337B029722328002CB991 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B2337B62972235E002CB991 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337B42972235B002CB991 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B2337B729722394002CB991 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337B8297223AB002CB991 /* MainState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B2337BA297224EA002CB991 /* SnipeIt */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337BB297224FA002CB991 /* Views */,
+			);
+			path = SnipeIt;
+			sourceTree = "<group>";
+		};
+		4B2337BB297224FA002CB991 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337BC2972250B002CB991 /* SnipeItView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +346,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2337B52972235B002CB991 /* MainViewModel.swift in Sources */,
+				4B2337AF29721DF7002CB991 /* ServerConfigView.swift in Sources */,
+				4B2337B129722328002CB991 /* MainView.swift in Sources */,
 				4B23378329721D86002CB991 /* ContentView.swift in Sources */,
+				4B2337B9297223AB002CB991 /* MainState.swift in Sources */,
 				4B23378129721D86002CB991 /* SnipeItApp.swift in Sources */,
+				4B2337BD2972250B002CB991 /* SnipeItView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
