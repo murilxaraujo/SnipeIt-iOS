@@ -39,6 +39,8 @@
 		4BBB8943297329B4000FCC25 /* DeploymentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB8942297329B4000FCC25 /* DeploymentStatus.swift */; };
 		4BBB894529732AE7000FCC25 /* HardwareServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB894429732AE7000FCC25 /* HardwareServiceAPI.swift */; };
 		4BBB894729732BD7000FCC25 /* HardwareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB894629732BD7000FCC25 /* HardwareViewModel.swift */; };
+		4BBB894A29733B65000FCC25 /* CachableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB894929733B65000FCC25 /* CachableImage.swift */; };
+		4BBB894D29733BE8000FCC25 /* Image+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB894C29733BE8000FCC25 /* Image+Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		4BBB8942297329B4000FCC25 /* DeploymentStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeploymentStatus.swift; sourceTree = "<group>"; };
 		4BBB894429732AE7000FCC25 /* HardwareServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareServiceAPI.swift; sourceTree = "<group>"; };
 		4BBB894629732BD7000FCC25 /* HardwareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareViewModel.swift; sourceTree = "<group>"; };
+		4BBB894929733B65000FCC25 /* CachableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachableImage.swift; sourceTree = "<group>"; };
+		4BBB894C29733BE8000FCC25 /* Image+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Data.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 		4B23377F29721D86002CB991 /* SnipeIt */ = {
 			isa = PBXGroup;
 			children = (
+				4BBB894B29733BDB000FCC25 /* Extensions */,
+				4BBB894829733B4F000FCC25 /* Components */,
 				4B2337E529724813002CB991 /* Info.plist */,
 				4B2337C129722CA0002CB991 /* Services */,
 				4B2337AB29721DA6002CB991 /* Features */,
@@ -396,6 +402,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4BBB894829733B4F000FCC25 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4BBB894929733B65000FCC25 /* CachableImage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4BBB894B29733BDB000FCC25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4BBB894C29733BE8000FCC25 /* Image+Data.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -549,11 +571,13 @@
 				4B23378129721D86002CB991 /* SnipeItApp.swift in Sources */,
 				4BBB894529732AE7000FCC25 /* HardwareServiceAPI.swift in Sources */,
 				4B2337E4297242B1002CB991 /* ManufacturersViewModel.swift in Sources */,
+				4BBB894D29733BE8000FCC25 /* Image+Data.swift in Sources */,
 				4B2337D829723AD9002CB991 /* SnipeItServiceAPI.swift in Sources */,
 				4B2337CE297232C6002CB991 /* SnipeItCollection.swift in Sources */,
 				4B2337D229723A36002CB991 /* SnipeItAPIConfig.swift in Sources */,
 				4B2337C729723033002CB991 /* Manufacturer.swift in Sources */,
 				4BBB8943297329B4000FCC25 /* DeploymentStatus.swift in Sources */,
+				4BBB894A29733B65000FCC25 /* CachableImage.swift in Sources */,
 				4B2337BD2972250B002CB991 /* SnipeItView.swift in Sources */,
 				4B2337C429722CC7002CB991 /* SnipeItService.swift in Sources */,
 				4BBB8935297320A9000FCC25 /* ResolveService.swift in Sources */,

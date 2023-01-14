@@ -18,7 +18,9 @@ struct MainView: View {
                     viewModel.fetch()
                 }
         case .configured:
-            HardwareView()
+            NavigationStack {
+                HardwareView()
+            }
         case .pendingConfiguration:
             ServerConfigView()
         }

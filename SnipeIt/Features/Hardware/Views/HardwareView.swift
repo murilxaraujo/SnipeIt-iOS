@@ -25,14 +25,17 @@ struct HardwareView: View {
                 }.padding(.top)
                     .padding(.bottom)
                 Spacer()
-                AsyncImage(url: URL(string: hardware.image.replacingOccurrences(of: "\\", with: "")))
+                CachableImage(urlString: hardware.image.replacingOccurrences(of: "\\", with: "").replacingOccurrences(of: "https", with: "http"))
                     .frame(width: 100, height: 100)
+                    .background(.gray)
+                    .cornerRadius(5)
             }
         
         }
         .onAppear {
             viewModel.fetch()
         }
+        .navigationBarTitle("Hardware")
     }
 }
 
