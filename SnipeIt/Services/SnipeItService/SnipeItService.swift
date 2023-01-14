@@ -9,10 +9,11 @@ import Foundation
 
 protocol SnipeItService {
     var manufacturers: ManufacturersService { get }
+    var hardware: HardwareService { get }
 }
 
-protocol AssetModelService {
-    
+protocol HardwareService {
+    func fetch() async throws -> SnipeItCollection<Hardware>
 }
 
 protocol ManufacturersService {
