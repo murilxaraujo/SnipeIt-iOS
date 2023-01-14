@@ -9,4 +9,9 @@ import Foundation
 
 class SnipeItServiceAPI: SnipeItService {
     
+    var manufacturers: ManufacturersService
+    
+    init(config: SnipeItAPIConfig) {
+        manufacturers = ManufacturersServiceAPI(config: config)
+    }
 }

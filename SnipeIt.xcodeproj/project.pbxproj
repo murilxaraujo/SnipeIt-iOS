@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4B23378129721D86002CB991 /* SnipeItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23378029721D86002CB991 /* SnipeItApp.swift */; };
-		4B23378329721D86002CB991 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23378229721D86002CB991 /* ContentView.swift */; };
 		4B23378529721D88002CB991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B23378429721D88002CB991 /* Assets.xcassets */; };
 		4B23378929721D88002CB991 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B23378829721D88002CB991 /* Preview Assets.xcassets */; };
 		4B23379329721D89002CB991 /* SnipeItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23379229721D89002CB991 /* SnipeItTests.swift */; };
@@ -28,6 +27,8 @@
 		4B2337D229723A36002CB991 /* SnipeItAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337D129723A36002CB991 /* SnipeItAPIConfig.swift */; };
 		4B2337D629723A92002CB991 /* ManufacturersServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337D529723A92002CB991 /* ManufacturersServiceAPI.swift */; };
 		4B2337D829723AD9002CB991 /* SnipeItServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337D729723AD9002CB991 /* SnipeItServiceAPI.swift */; };
+		4B2337E129724295002CB991 /* ManufacturersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337E029724295002CB991 /* ManufacturersView.swift */; };
+		4B2337E4297242B1002CB991 /* ManufacturersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337E3297242B1002CB991 /* ManufacturersViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,6 @@
 /* Begin PBXFileReference section */
 		4B23377D29721D86002CB991 /* SnipeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnipeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B23378029721D86002CB991 /* SnipeItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItApp.swift; sourceTree = "<group>"; };
-		4B23378229721D86002CB991 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B23378429721D88002CB991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B23378629721D88002CB991 /* SnipeIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnipeIt.entitlements; sourceTree = "<group>"; };
 		4B23378829721D88002CB991 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -73,6 +73,9 @@
 		4B2337D129723A36002CB991 /* SnipeItAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItAPIConfig.swift; sourceTree = "<group>"; };
 		4B2337D529723A92002CB991 /* ManufacturersServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturersServiceAPI.swift; sourceTree = "<group>"; };
 		4B2337D729723AD9002CB991 /* SnipeItServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItServiceAPI.swift; sourceTree = "<group>"; };
+		4B2337E029724295002CB991 /* ManufacturersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturersView.swift; sourceTree = "<group>"; };
+		4B2337E3297242B1002CB991 /* ManufacturersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturersViewModel.swift; sourceTree = "<group>"; };
+		4B2337E529724813002CB991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +126,10 @@
 		4B23377F29721D86002CB991 /* SnipeIt */ = {
 			isa = PBXGroup;
 			children = (
+				4B2337E529724813002CB991 /* Info.plist */,
 				4B2337C129722CA0002CB991 /* Services */,
 				4B2337AB29721DA6002CB991 /* Features */,
 				4B23378029721D86002CB991 /* SnipeItApp.swift */,
-				4B23378229721D86002CB991 /* ContentView.swift */,
 				4B23378429721D88002CB991 /* Assets.xcassets */,
 				4B23378629721D88002CB991 /* SnipeIt.entitlements */,
 				4B23378729721D88002CB991 /* Preview Content */,
@@ -162,6 +165,7 @@
 		4B2337AB29721DA6002CB991 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4B2337DC29724255002CB991 /* Manufacturers */,
 				4B2337BA297224EA002CB991 /* SnipeIt */,
 				4B2337B229722345002CB991 /* Main */,
 				4B2337AC29721DB2002CB991 /* ServerConfig */,
@@ -297,6 +301,31 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4B2337DC29724255002CB991 /* Manufacturers */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337E22972429C002CB991 /* ViewModels */,
+				4B2337DF29724285002CB991 /* Views */,
+			);
+			path = Manufacturers;
+			sourceTree = "<group>";
+		};
+		4B2337DF29724285002CB991 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337E029724295002CB991 /* ManufacturersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B2337E22972429C002CB991 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337E3297242B1002CB991 /* ManufacturersViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,10 +467,10 @@
 				4B2337AF29721DF7002CB991 /* ServerConfigView.swift in Sources */,
 				4B2337B129722328002CB991 /* MainView.swift in Sources */,
 				4B2337CB29723120002CB991 /* SnipeItActions.swift in Sources */,
-				4B23378329721D86002CB991 /* ContentView.swift in Sources */,
 				4B2337B9297223AB002CB991 /* MainState.swift in Sources */,
 				4B2337D629723A92002CB991 /* ManufacturersServiceAPI.swift in Sources */,
 				4B23378129721D86002CB991 /* SnipeItApp.swift in Sources */,
+				4B2337E4297242B1002CB991 /* ManufacturersViewModel.swift in Sources */,
 				4B2337D829723AD9002CB991 /* SnipeItServiceAPI.swift in Sources */,
 				4B2337CE297232C6002CB991 /* SnipeItCollection.swift in Sources */,
 				4B2337D229723A36002CB991 /* SnipeItAPIConfig.swift in Sources */,
@@ -449,6 +478,7 @@
 				4B2337BD2972250B002CB991 /* SnipeItView.swift in Sources */,
 				4B2337C429722CC7002CB991 /* SnipeItService.swift in Sources */,
 				4B2337C029722BA1002CB991 /* ServerConfigViewModel.swift in Sources */,
+				4B2337E129724295002CB991 /* ManufacturersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +637,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SnipeIt/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -645,6 +676,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SnipeIt/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
