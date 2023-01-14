@@ -8,6 +8,6 @@
 import Foundation
 
 struct SnipeItDate: Codable {
-    let dateTime: String
+    let datetime: String
     let formatted: String
 }

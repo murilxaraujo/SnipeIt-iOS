@@ -8,19 +8,19 @@
 import Foundation
 
 struct Manufacturer: Codable {
-    let id: Int?
-    let name: String?
-    let url: String?
+    let id: Int
+    let name: String
+    let url: String
     let image: String?
-    let assetCount: Int?
-    let licenseCount: Int?
-    let consumableCount: Int?
-    let accessoriesCount: Int?
-    let createdAt: SnipeItDate?
-    let updatedAt: SnipeItDate?
+    let assetCount: Int
+    let licenseCount: Int
+    let consumableCount: Int
+    let accessoriesCount: Int
+    let createdAt: SnipeItDate
+    let updatedAt: SnipeItDate
     let deletedAt: SnipeItDate?
-    let availableActions: SnipeItActions?
-    
+    let availableActions: SnipeItActions
+
     private enum CodingKeys : String, CodingKey {
         case id, name, url, image
         case assetCount = "assets_count"

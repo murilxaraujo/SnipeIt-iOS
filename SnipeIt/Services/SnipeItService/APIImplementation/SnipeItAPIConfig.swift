@@ -33,14 +33,8 @@ struct SnipeItAPIConfig {
             request.httpBody = try? JSONEncoder().encode(body)
         }
         
-        request.setValue(
-            "Bearer \(token)",
-            forHTTPHeaderField: "Authentication"
-        )
-        request.setValue(
-            "application/json;charset=utf-8",
-            forHTTPHeaderField: "Content-Type"
-        )
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let (data, response) = try await URLSession.shared.data(for: request)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw APIErrors.serverError }
