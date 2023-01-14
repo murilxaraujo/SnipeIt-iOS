@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ServerConfigView: View {
-    @State var serverURL: String = ""
-    @State var serverToken: String = ""
+    @StateObject var viewModel = ServerConfigViewModel()
     
     var body: some View {
         VStack {
@@ -25,13 +24,13 @@ struct ServerConfigView: View {
                 .font(.body)
                 .multilineTextAlignment(.center)
             VStack {
-                TextField("Server URL", text: $serverURL)
+                TextField("Server URL", text: $viewModel.serverURL)
                     .textFieldStyle(.roundedBorder)
-                TextField("Token", text: $serverToken)
+                TextField("Token", text: $viewModel.serverToken)
                     .textFieldStyle(.roundedBorder)
             }.padding()
             Button {
-                
+                viewModel.submit()
             } label: {
                 Text("Submit")
             }.buttonStyle(.borderedProminent)

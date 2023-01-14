@@ -19,6 +19,15 @@
 		4B2337B52972235B002CB991 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337B42972235B002CB991 /* MainViewModel.swift */; };
 		4B2337B9297223AB002CB991 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337B8297223AB002CB991 /* MainState.swift */; };
 		4B2337BD2972250B002CB991 /* SnipeItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337BC2972250B002CB991 /* SnipeItView.swift */; };
+		4B2337C029722BA1002CB991 /* ServerConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337BF29722BA0002CB991 /* ServerConfigViewModel.swift */; };
+		4B2337C429722CC7002CB991 /* SnipeItService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337C329722CC7002CB991 /* SnipeItService.swift */; };
+		4B2337C729723033002CB991 /* Manufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337C629723033002CB991 /* Manufacturer.swift */; };
+		4B2337C9297230D1002CB991 /* SnipeItDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337C8297230D1002CB991 /* SnipeItDate.swift */; };
+		4B2337CB29723120002CB991 /* SnipeItActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337CA29723120002CB991 /* SnipeItActions.swift */; };
+		4B2337CE297232C6002CB991 /* SnipeItCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337CD297232C6002CB991 /* SnipeItCollection.swift */; };
+		4B2337D229723A36002CB991 /* SnipeItAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337D129723A36002CB991 /* SnipeItAPIConfig.swift */; };
+		4B2337D629723A92002CB991 /* ManufacturersServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337D529723A92002CB991 /* ManufacturersServiceAPI.swift */; };
+		4B2337D829723AD9002CB991 /* SnipeItServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337D729723AD9002CB991 /* SnipeItServiceAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,15 @@
 		4B2337B42972235B002CB991 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4B2337B8297223AB002CB991 /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
 		4B2337BC2972250B002CB991 /* SnipeItView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItView.swift; sourceTree = "<group>"; };
+		4B2337BF29722BA0002CB991 /* ServerConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfigViewModel.swift; sourceTree = "<group>"; };
+		4B2337C329722CC7002CB991 /* SnipeItService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItService.swift; sourceTree = "<group>"; };
+		4B2337C629723033002CB991 /* Manufacturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manufacturer.swift; sourceTree = "<group>"; };
+		4B2337C8297230D1002CB991 /* SnipeItDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItDate.swift; sourceTree = "<group>"; };
+		4B2337CA29723120002CB991 /* SnipeItActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItActions.swift; sourceTree = "<group>"; };
+		4B2337CD297232C6002CB991 /* SnipeItCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItCollection.swift; sourceTree = "<group>"; };
+		4B2337D129723A36002CB991 /* SnipeItAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItAPIConfig.swift; sourceTree = "<group>"; };
+		4B2337D529723A92002CB991 /* ManufacturersServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturersServiceAPI.swift; sourceTree = "<group>"; };
+		4B2337D729723AD9002CB991 /* SnipeItServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItServiceAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +123,7 @@
 		4B23377F29721D86002CB991 /* SnipeIt */ = {
 			isa = PBXGroup;
 			children = (
+				4B2337C129722CA0002CB991 /* Services */,
 				4B2337AB29721DA6002CB991 /* Features */,
 				4B23378029721D86002CB991 /* SnipeItApp.swift */,
 				4B23378229721D86002CB991 /* ContentView.swift */,
@@ -153,6 +172,7 @@
 		4B2337AC29721DB2002CB991 /* ServerConfig */ = {
 			isa = PBXGroup;
 			children = (
+				4B2337BE29722B87002CB991 /* ViewModel */,
 				4B2337AD29721DE7002CB991 /* Views */,
 			);
 			path = ServerConfig;
@@ -216,6 +236,69 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4B2337BE29722B87002CB991 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337BF29722BA0002CB991 /* ServerConfigViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B2337C129722CA0002CB991 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337C229722CB6002CB991 /* SnipeItService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4B2337C229722CB6002CB991 /* SnipeItService */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337CF29723500002CB991 /* APIImplementation */,
+				4B2337CC29723261002CB991 /* ManufacturersService */,
+				4B2337C529722D44002CB991 /* Models */,
+				4B2337C329722CC7002CB991 /* SnipeItService.swift */,
+			);
+			path = SnipeItService;
+			sourceTree = "<group>";
+		};
+		4B2337C529722D44002CB991 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337C629723033002CB991 /* Manufacturer.swift */,
+				4B2337C8297230D1002CB991 /* SnipeItDate.swift */,
+				4B2337CA29723120002CB991 /* SnipeItActions.swift */,
+				4B2337CD297232C6002CB991 /* SnipeItCollection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4B2337CC29723261002CB991 /* ManufacturersService */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337D529723A92002CB991 /* ManufacturersServiceAPI.swift */,
+			);
+			path = ManufacturersService;
+			sourceTree = "<group>";
+		};
+		4B2337CF29723500002CB991 /* APIImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				4B2337D029723A22002CB991 /* Model */,
+				4B2337D129723A36002CB991 /* SnipeItAPIConfig.swift */,
+				4B2337D729723AD9002CB991 /* SnipeItServiceAPI.swift */,
+			);
+			path = APIImplementation;
+			sourceTree = "<group>";
+		};
+		4B2337D029723A22002CB991 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,6 +315,8 @@
 			dependencies = (
 			);
 			name = SnipeIt;
+			packageProductDependencies = (
+			);
 			productName = SnipeIt;
 			productReference = 4B23377D29721D86002CB991 /* SnipeIt.app */;
 			productType = "com.apple.product-type.application";
@@ -304,6 +389,8 @@
 				Base,
 			);
 			mainGroup = 4B23377429721D86002CB991;
+			packageReferences = (
+			);
 			productRefGroup = 4B23377E29721D86002CB991 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,13 +433,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2337C9297230D1002CB991 /* SnipeItDate.swift in Sources */,
 				4B2337B52972235B002CB991 /* MainViewModel.swift in Sources */,
 				4B2337AF29721DF7002CB991 /* ServerConfigView.swift in Sources */,
 				4B2337B129722328002CB991 /* MainView.swift in Sources */,
+				4B2337CB29723120002CB991 /* SnipeItActions.swift in Sources */,
 				4B23378329721D86002CB991 /* ContentView.swift in Sources */,
 				4B2337B9297223AB002CB991 /* MainState.swift in Sources */,
+				4B2337D629723A92002CB991 /* ManufacturersServiceAPI.swift in Sources */,
 				4B23378129721D86002CB991 /* SnipeItApp.swift in Sources */,
+				4B2337D829723AD9002CB991 /* SnipeItServiceAPI.swift in Sources */,
+				4B2337CE297232C6002CB991 /* SnipeItCollection.swift in Sources */,
+				4B2337D229723A36002CB991 /* SnipeItAPIConfig.swift in Sources */,
+				4B2337C729723033002CB991 /* Manufacturer.swift in Sources */,
 				4B2337BD2972250B002CB991 /* SnipeItView.swift in Sources */,
+				4B2337C429722CC7002CB991 /* SnipeItService.swift in Sources */,
+				4B2337C029722BA1002CB991 /* ServerConfigViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
