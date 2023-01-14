@@ -10,8 +10,10 @@ import Foundation
 class SnipeItServiceAPI: SnipeItService {
     
     var manufacturers: ManufacturersService
+    var hardware: HardwareService
     
     init(config: SnipeItAPIConfig) {
         manufacturers = ManufacturersServiceAPI(config: config)
+        hardware = HardwareServiceAPI(config: config)
     }
 }

@@ -18,7 +18,7 @@ struct MainView: View {
                     viewModel.fetch()
                 }
         case .configured:
-            ManufacturersView()
+            HardwareView()
         case .pendingConfiguration:
             ServerConfigView()
         }
