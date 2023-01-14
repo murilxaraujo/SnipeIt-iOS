@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0E9632297316E600B5945D /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E9631297316E600B5945D /* KeychainService.swift */; };
+		4B0E9635297317F500B5945D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4B0E9634297317F500B5945D /* KeychainAccess */; };
 		4B23378129721D86002CB991 /* SnipeItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23378029721D86002CB991 /* SnipeItApp.swift */; };
 		4B23378529721D88002CB991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B23378429721D88002CB991 /* Assets.xcassets */; };
 		4B23378929721D88002CB991 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B23378829721D88002CB991 /* Preview Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		4B2337D829723AD9002CB991 /* SnipeItServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337D729723AD9002CB991 /* SnipeItServiceAPI.swift */; };
 		4B2337E129724295002CB991 /* ManufacturersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337E029724295002CB991 /* ManufacturersView.swift */; };
 		4B2337E4297242B1002CB991 /* ManufacturersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2337E3297242B1002CB991 /* ManufacturersViewModel.swift */; };
+		4BBB893229732061000FCC25 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4BBB893129732061000FCC25 /* Swinject */; };
+		4BBB8935297320A9000FCC25 /* ResolveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB8934297320A9000FCC25 /* ResolveService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B0E9631297316E600B5945D /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		4B23377D29721D86002CB991 /* SnipeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnipeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B23378029721D86002CB991 /* SnipeItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipeItApp.swift; sourceTree = "<group>"; };
 		4B23378429721D88002CB991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		4B2337E029724295002CB991 /* ManufacturersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturersView.swift; sourceTree = "<group>"; };
 		4B2337E3297242B1002CB991 /* ManufacturersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturersViewModel.swift; sourceTree = "<group>"; };
 		4B2337E529724813002CB991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4BBB8934297320A9000FCC25 /* ResolveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolveService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0E9635297317F500B5945D /* KeychainAccess in Frameworks */,
+				4BBB893229732061000FCC25 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B0E9630297316D300B5945D /* KeychainService */ = {
+			isa = PBXGroup;
+			children = (
+				4B0E9631297316E600B5945D /* KeychainService.swift */,
+			);
+			path = KeychainService;
+			sourceTree = "<group>";
+		};
 		4B23377429721D86002CB991 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +267,8 @@
 		4B2337C129722CA0002CB991 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4BBB893329732099000FCC25 /* DI */,
+				4B0E9630297316D300B5945D /* KeychainService */,
 				4B2337C229722CB6002CB991 /* SnipeItService */,
 			);
 			path = Services;
@@ -328,6 +346,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		4BBB893329732099000FCC25 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				4BBB8934297320A9000FCC25 /* ResolveService.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -345,6 +371,8 @@
 			);
 			name = SnipeIt;
 			packageProductDependencies = (
+				4B0E9634297317F500B5945D /* KeychainAccess */,
+				4BBB893129732061000FCC25 /* Swinject */,
 			);
 			productName = SnipeIt;
 			productReference = 4B23377D29721D86002CB991 /* SnipeIt.app */;
@@ -419,6 +447,8 @@
 			);
 			mainGroup = 4B23377429721D86002CB991;
 			packageReferences = (
+				4B0E9633297317F500B5945D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				4BBB893029732061000FCC25 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 4B23377E29721D86002CB991 /* Products */;
 			projectDirPath = "";
@@ -467,6 +497,7 @@
 				4B2337AF29721DF7002CB991 /* ServerConfigView.swift in Sources */,
 				4B2337B129722328002CB991 /* MainView.swift in Sources */,
 				4B2337CB29723120002CB991 /* SnipeItActions.swift in Sources */,
+				4B0E9632297316E600B5945D /* KeychainService.swift in Sources */,
 				4B2337B9297223AB002CB991 /* MainState.swift in Sources */,
 				4B2337D629723A92002CB991 /* ManufacturersServiceAPI.swift in Sources */,
 				4B23378129721D86002CB991 /* SnipeItApp.swift in Sources */,
@@ -477,6 +508,7 @@
 				4B2337C729723033002CB991 /* Manufacturer.swift in Sources */,
 				4B2337BD2972250B002CB991 /* SnipeItView.swift in Sources */,
 				4B2337C429722CC7002CB991 /* SnipeItService.swift in Sources */,
+				4BBB8935297320A9000FCC25 /* ResolveService.swift in Sources */,
 				4B2337C029722BA1002CB991 /* ServerConfigViewModel.swift in Sources */,
 				4B2337E129724295002CB991 /* ManufacturersView.swift in Sources */,
 			);
@@ -832,6 +864,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B0E9633297317F500B5945D /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4BBB893029732061000FCC25 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B0E9634297317F500B5945D /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B0E9633297317F500B5945D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		4BBB893129732061000FCC25 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BBB893029732061000FCC25 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B23377529721D86002CB991 /* Project object */;
 }

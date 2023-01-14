@@ -14,8 +14,11 @@ struct MainView: View {
         switch viewModel.state {
         case .idle:
             ProgressView().progressViewStyle(.circular)
+                .onAppear {
+                    viewModel.fetch()
+                }
         case .configured:
-            SnipeItView()
+            ManufacturersView()
         case .pendingConfiguration:
             ServerConfigView()
         }
