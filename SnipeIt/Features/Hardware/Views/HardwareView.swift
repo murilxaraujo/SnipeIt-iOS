@@ -36,6 +36,15 @@ struct HardwareView: View {
             viewModel.fetch()
         }
         .navigationBarTitle("Hardware")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink {
+                    AddHardwareView()
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
     }
 }
 

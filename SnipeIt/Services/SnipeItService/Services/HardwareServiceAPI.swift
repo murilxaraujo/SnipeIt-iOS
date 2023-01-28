@@ -19,3 +19,16 @@ class HardwareServiceAPI: HardwareService {
         return try await snipeItConfig.executeGetting(forPath: "api/v1/hardware")
     }
 }
+
+class HardwareModelAPI: HardwareModelService {
+    
+    let snipeItConfig: SnipeItAPIConfig
+    
+    init (config: SnipeItAPIConfig) {
+        snipeItConfig = config
+    }
+    
+    func fetch() async throws -> SnipeItCollection<HardwareModel> {
+        return try await snipeItConfig.executeGetting(forPath: "api/v1/models")
+    }
+}
