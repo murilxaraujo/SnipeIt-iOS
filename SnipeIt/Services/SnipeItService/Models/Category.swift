@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CategoryType: String, Codable {
+enum CategoryType: String, Codable, CaseIterable {
     case asset = "Asset"
     case accessory = "Accessory"
     case consumable = "Consumable"

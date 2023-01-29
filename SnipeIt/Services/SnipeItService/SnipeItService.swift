@@ -34,4 +34,5 @@ protocol HardwareModelService {
 
 protocol CategoryService {
     func fetch() async throws -> SnipeItCollection<Category>
+    func add(withName name: String, andType type: CategoryType) async throws
 }

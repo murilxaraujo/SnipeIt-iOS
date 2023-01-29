@@ -24,6 +24,28 @@ struct CategoriesView: View {
             }
         }.onAppear {
             viewModel.getData()
+        }.toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    viewModel.didTapNewCategory()
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
         }.navigationTitle("Categories")
+            .alert("New category", isPresented: $viewModel.isPresentingNewCategory) {
+                Form {
+                    TextField("Name", text: $viewModel.newCategoryName)
+                    Picker("Type", selection: $viewModel.newCategoryType) {
+                        ForEach(CategoryType.allCases, id: \.self) { value in
+                            Text(value.rawValue)
+                                .tag(value)
+                        }
+                    }
+                }
+                Button("Add") {
+                    viewModel.addCategory()
+                }
+            }
     }
 }
