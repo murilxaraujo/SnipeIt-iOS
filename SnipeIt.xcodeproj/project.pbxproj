@@ -38,6 +38,13 @@
 		4BBA2F5D2985D1E70030789A /* HardwareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F5C2985D1E70030789A /* HardwareModel.swift */; };
 		4BBA2F612985DE830030789A /* HardwareModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F602985DE830030789A /* HardwareModelView.swift */; };
 		4BBA2F642985DEF20030789A /* HardwareModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F632985DEF20030789A /* HardwareModelViewModel.swift */; };
+		4BBA2F662986BE9C0030789A /* AddHardwareModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F652986BE9C0030789A /* AddHardwareModelView.swift */; };
+		4BBA2F682986E5F40030789A /* AddHardwareModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F672986E5F40030789A /* AddHardwareModelViewModel.swift */; };
+		4BBA2F6E2986F0650030789A /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F6D2986F0650030789A /* Empty.swift */; };
+		4BBA2F702986F2BE0030789A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F6F2986F2BE0030789A /* Category.swift */; };
+		4BBA2F722986F32F0030789A /* CategoryServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F712986F32F0030789A /* CategoryServiceAPI.swift */; };
+		4BBA2F792986F5170030789A /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F782986F5170030789A /* CategoriesView.swift */; };
+		4BBA2F7B2986F5230030789A /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA2F7A2986F5230030789A /* CategoriesViewModel.swift */; };
 		4BBB893229732061000FCC25 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4BBB893129732061000FCC25 /* Swinject */; };
 		4BBB8935297320A9000FCC25 /* ResolveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB8934297320A9000FCC25 /* ResolveService.swift */; };
 		4BBB893D297328C6000FCC25 /* HardwareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB893C297328C6000FCC25 /* HardwareView.swift */; };
@@ -103,6 +110,13 @@
 		4BBA2F5C2985D1E70030789A /* HardwareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareModel.swift; sourceTree = "<group>"; };
 		4BBA2F602985DE830030789A /* HardwareModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareModelView.swift; sourceTree = "<group>"; };
 		4BBA2F632985DEF20030789A /* HardwareModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareModelViewModel.swift; sourceTree = "<group>"; };
+		4BBA2F652986BE9C0030789A /* AddHardwareModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHardwareModelView.swift; sourceTree = "<group>"; };
+		4BBA2F672986E5F40030789A /* AddHardwareModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHardwareModelViewModel.swift; sourceTree = "<group>"; };
+		4BBA2F6D2986F0650030789A /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		4BBA2F6F2986F2BE0030789A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		4BBA2F712986F32F0030789A /* CategoryServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceAPI.swift; sourceTree = "<group>"; };
+		4BBA2F782986F5170030789A /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		4BBA2F7A2986F5230030789A /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		4BBB8934297320A9000FCC25 /* ResolveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolveService.swift; sourceTree = "<group>"; };
 		4BBB893C297328C6000FCC25 /* HardwareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareView.swift; sourceTree = "<group>"; };
 		4BBB893E297328EB000FCC25 /* Hardware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hardware.swift; sourceTree = "<group>"; };
@@ -213,6 +227,7 @@
 		4B2337AB29721DA6002CB991 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4BBA2F732986F4E50030789A /* Categories */,
 				4BBA2F5E2985DE600030789A /* HardwareModel */,
 				4BBB893629732886000FCC25 /* Hardware */,
 				4B2337DC29724255002CB991 /* Manufacturers */,
@@ -331,6 +346,8 @@
 				4BBB8942297329B4000FCC25 /* DeploymentStatus.swift */,
 				4BBA2F582985CFF90030789A /* StatusLabel.swift */,
 				4BBA2F5C2985D1E70030789A /* HardwareModel.swift */,
+				4BBA2F6D2986F0650030789A /* Empty.swift */,
+				4BBA2F6F2986F2BE0030789A /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,6 +358,7 @@
 				4B2337D529723A92002CB991 /* ManufacturersServiceAPI.swift */,
 				4BBB894429732AE7000FCC25 /* HardwareServiceAPI.swift */,
 				4BBA2F5A2985D0DC0030789A /* StatusLabelServiceAPI.swift */,
+				4BBA2F712986F32F0030789A /* CategoryServiceAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -400,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				4BBA2F602985DE830030789A /* HardwareModelView.swift */,
+				4BBA2F652986BE9C0030789A /* AddHardwareModelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,6 +427,32 @@
 			isa = PBXGroup;
 			children = (
 				4BBA2F632985DEF20030789A /* HardwareModelViewModel.swift */,
+				4BBA2F672986E5F40030789A /* AddHardwareModelViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BBA2F732986F4E50030789A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4BBA2F752986F4FA0030789A /* ViewModel */,
+				4BBA2F742986F4F10030789A /* View */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		4BBA2F742986F4F10030789A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BBA2F782986F5170030789A /* CategoriesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BBA2F752986F4FA0030789A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BBA2F7A2986F5230030789A /* CategoriesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -606,8 +651,10 @@
 				4B2337B52972235B002CB991 /* MainViewModel.swift in Sources */,
 				4BBB894729732BD7000FCC25 /* HardwareViewModel.swift in Sources */,
 				4BBA2F592985CFF90030789A /* StatusLabel.swift in Sources */,
+				4BBA2F6E2986F0650030789A /* Empty.swift in Sources */,
 				4B2337AF29721DF7002CB991 /* ServerConfigView.swift in Sources */,
 				4B2337B129722328002CB991 /* MainView.swift in Sources */,
+				4BBA2F792986F5170030789A /* CategoriesView.swift in Sources */,
 				4B2337CB29723120002CB991 /* SnipeItActions.swift in Sources */,
 				4B0E9632297316E600B5945D /* KeychainService.swift in Sources */,
 				4B2337B9297223AB002CB991 /* MainState.swift in Sources */,
@@ -621,6 +668,7 @@
 				4B23378129721D86002CB991 /* SnipeItApp.swift in Sources */,
 				4BBB894529732AE7000FCC25 /* HardwareServiceAPI.swift in Sources */,
 				4B2337E4297242B1002CB991 /* ManufacturersViewModel.swift in Sources */,
+				4BBA2F702986F2BE0030789A /* Category.swift in Sources */,
 				4BBB894D29733BE8000FCC25 /* Image+Data.swift in Sources */,
 				4B2337D829723AD9002CB991 /* SnipeItServiceAPI.swift in Sources */,
 				4B2337CE297232C6002CB991 /* SnipeItCollection.swift in Sources */,
@@ -628,11 +676,15 @@
 				4B2337C729723033002CB991 /* Manufacturer.swift in Sources */,
 				4BBB8943297329B4000FCC25 /* DeploymentStatus.swift in Sources */,
 				4BBB894A29733B65000FCC25 /* CachableImage.swift in Sources */,
+				4BBA2F7B2986F5230030789A /* CategoriesViewModel.swift in Sources */,
+				4BBA2F662986BE9C0030789A /* AddHardwareModelView.swift in Sources */,
 				4BBA2F612985DE830030789A /* HardwareModelView.swift in Sources */,
 				4BBA2F572985CD120030789A /* AddHardwareViewModel.swift in Sources */,
+				4BBA2F682986E5F40030789A /* AddHardwareModelViewModel.swift in Sources */,
 				4B2337BD2972250B002CB991 /* SnipeItView.swift in Sources */,
 				4B2337C429722CC7002CB991 /* SnipeItService.swift in Sources */,
 				4BBB8935297320A9000FCC25 /* ResolveService.swift in Sources */,
+				4BBA2F722986F32F0030789A /* CategoryServiceAPI.swift in Sources */,
 				4B2337C029722BA1002CB991 /* ServerConfigViewModel.swift in Sources */,
 				4B2337E129724295002CB991 /* ManufacturersView.swift in Sources */,
 			);

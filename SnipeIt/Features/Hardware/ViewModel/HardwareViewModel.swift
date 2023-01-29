@@ -9,6 +9,7 @@ import Foundation
 
 class HardwareViewModel: ObservableObject {
     @Published var hardwares: [Hardware] = []
+    @Published var isShowingAddHardware = false
     
     @ResolveService var service: SnipeItService?
     
@@ -21,5 +22,9 @@ class HardwareViewModel: ObservableObject {
                 print(error)
             }
         }
+    }
+    
+    func newHardwarePressed() {
+        isShowingAddHardware = true
     }
 }

@@ -13,11 +13,13 @@ class SnipeItServiceAPI: SnipeItService {
     var hardware: HardwareService
     var statusLabel: StatusLabelService
     var hardwareModel: HardwareModelService
+    var category: CategoryService
     
     init(config: SnipeItAPIConfig) {
         manufacturers = ManufacturersServiceAPI(config: config)
         hardware = HardwareServiceAPI(config: config)
         statusLabel = StatusLabelServiceAPI(config: config)
         hardwareModel = HardwareModelAPI(config: config)
+        category = CategoryServiceAPI(config: config)
     }
 }

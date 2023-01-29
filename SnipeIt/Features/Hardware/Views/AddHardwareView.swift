@@ -21,24 +21,27 @@ struct AddHardwareView: View {
                     }
                 }
             }
-            if let assetModel = viewModel.selectedModel {
-                HStack {
-                    Text("Model")
-                    Spacer()
-                    Text(assetModel.name)
-                }
-            } else {
-                NavigationLink {
-                    HardwareModelView(selected: $viewModel.selectedModel)
-                } label: {
+            Button {
+                viewModel.didTapSelectModel()
+            } label: {
+                if let assetModel = viewModel.selectedModel {
+                    HStack {
+                        Text("Model")
+                        Spacer()
+                        Text(assetModel.name)
+                    }
+                } else {
                     Text("Select hardware model")
                 }
-
             }
         }.onAppear {
             viewModel.getData()
         }.navigationTitle("Add hardware")
-            
+            .sheet(isPresented: $viewModel.isPresentingSelectModel) {
+                NavigationStack {
+                    HardwareModelView(selected: $viewModel.selectedModel)
+                }
+            }
     }
 }
 

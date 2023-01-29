@@ -38,11 +38,17 @@ struct HardwareView: View {
         .navigationBarTitle("Hardware")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink {
-                    AddHardwareView()
+                Button {
+                    viewModel.newHardwarePressed()
                 } label: {
                     Image(systemName: "plus")
                 }
+
+            }
+        }
+        .sheet(isPresented: $viewModel.isShowingAddHardware) {
+            NavigationStack {
+                AddHardwareView()
             }
         }
     }

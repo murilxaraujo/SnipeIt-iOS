@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ManufacturersView: View {
     @StateObject var viewModel = ManufacturersViewModel()
-
+    @Binding var selectedManufacturer: Manufacturer?
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         List(viewModel.manufacturers, id: \.id) { manufacturer in
             HStack {
@@ -27,10 +29,28 @@ struct ManufacturersView: View {
                 if manufacturer.licenseCount > 0 {
                     createBadge(withIconName: "key.fill", andTotal: manufacturer.licenseCount)
                 }
+            }.onTapGesture {
+                selectedManufacturer = manufacturer
+                dismiss()
             }
         }.onAppear {
             viewModel.fetch()
-        }
+        }.navigationTitle("Manufacturers")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        viewModel.didTapNewManufacturer()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }.alert("New manufacturer", isPresented: $viewModel.isPresentingNewManufacturer) {
+                TextField("Name", text: $viewModel.newManufacturerName)
+                Button("Add") {
+                    viewModel.addManufacturer()
+                }
+            }
+
     }
     
     @ViewBuilder
@@ -41,11 +61,5 @@ struct ManufacturersView: View {
             Text("\(total)")
                 .font(.caption)
         }
-    }
-}
-
-struct ManufacturersView_Previews: PreviewProvider {
-    static var previews: some View {
-        ManufacturersView()
     }
 }

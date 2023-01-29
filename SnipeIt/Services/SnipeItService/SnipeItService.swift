@@ -12,6 +12,7 @@ protocol SnipeItService {
     var hardware: HardwareService { get }
     var statusLabel: StatusLabelService { get }
     var hardwareModel: HardwareModelService { get }
+    var category: CategoryService { get }
 }
 
 protocol HardwareService {
@@ -20,6 +21,7 @@ protocol HardwareService {
 
 protocol ManufacturersService {
     func fetch() async throws -> SnipeItCollection<Manufacturer>
+    func add(withName name: String) async throws
 }
 
 protocol StatusLabelService {
@@ -28,4 +30,8 @@ protocol StatusLabelService {
 
 protocol HardwareModelService {
     func fetch() async throws -> SnipeItCollection<HardwareModel>
+}
+
+protocol CategoryService {
+    func fetch() async throws -> SnipeItCollection<Category>
 }

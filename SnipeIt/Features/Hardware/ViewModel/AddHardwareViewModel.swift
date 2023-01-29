@@ -13,16 +13,23 @@ class AddHardwareViewModel: ObservableObject {
     @Published var status: [StatusLabel] = []
     @Published var selectedStatus = 0
     @Published var selectedModel: HardwareModel?
+    
+    @Published var isPresentingSelectModel = false
+    
     @ResolveService var service: SnipeItService?
     
     @MainActor
     func getData() {
         Task {
-            do {
+            do { 
                 status = try await service!.statusLabel.fetch().rows
             } catch let error {
                 print(error)
             }
         }
+    }
+    
+    func didTapSelectModel() {
+        isPresentingSelectModel = true
     }
 }
